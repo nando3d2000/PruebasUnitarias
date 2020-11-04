@@ -32,13 +32,13 @@ class CalculatorTest {
 
 
     @Test
-    void MethodDivParams5And0ReturnsIllegalArgumentException() {
+    void MethodDivParams5And0ReturnsArithmeticException() {
         //Arrange
         Integer num1=5;
         Integer num2=0;
 
         //Assert
-        assertThrows(IllegalArgumentException.class,()->Calculator.div(num1,num2));
+        assertThrows(ArithmeticException.class,()->Calculator.div(num1,num2));
     }
     
     @Test
@@ -51,5 +51,16 @@ class CalculatorTest {
     	Integer result=Calculator.div(num1,num2);
     	//Assert
     	assertEquals(expected,result);
+    }
+    
+    @Test
+    void MethodDivParamsNullAnd3ReturnsIllegalArgumentException(){
+    	//Arrange
+    	Integer num1=null;
+    	Integer num2=3;
+    	
+    	
+    	//Assert
+    	assertThrows(IllegalArgumentException.class,()->Calculator.div(num1, num2));
     }
 }

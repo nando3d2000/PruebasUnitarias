@@ -29,7 +29,7 @@ public class Calculator {
 
     public static int div(Integer num1,Integer num2){
         if(num2==0)
-            throw new IllegalArgumentException("Division por cero no permitida");
+            throw new ArithmeticException("Division por cero no permitida");
         try {
             return num1/num2;
         }catch (NullPointerException ex)
