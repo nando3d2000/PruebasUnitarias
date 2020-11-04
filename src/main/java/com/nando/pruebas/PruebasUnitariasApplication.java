@@ -14,7 +14,7 @@ public class PruebasUnitariasApplication {
 				
 		SpringApplication.run(PruebasUnitariasApplication.class, args);
 
-		log.warn(Integer.toString(Calculator.div(10,2)));
+		log.warn(Integer.toString(Calculator.div(10,5)));
 		
 		
 	

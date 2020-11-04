@@ -38,6 +38,18 @@ class CalculatorTest {
         Integer num2=0;
 
         //Assert
-        assertThrows(IllegalArgumentException.class,()->div(num1,num2));
+        assertThrows(IllegalArgumentException.class,()->Calculator.div(num1,num2));
+    }
+    
+    @Test
+    void MethodDivParams10And5Returns2() {
+    	//Arrange
+    	Integer num1=10;
+    	Integer num2=5;
+    	Integer expected=2;
+    	//Act
+    	Integer result=Calculator.div(num1,num2);
+    	//Assert
+    	assertEquals(expected,result);
     }
 }
